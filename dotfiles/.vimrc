@@ -1,3 +1,10 @@
-set number
-set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¯,precedes:«,extends:»
+set shiftwidth=4
+set tabstop=4
+set listchars=space:·,tab:⟦·⟧,precedes:…,extends:…,eol:⊿
+
+set expandtab
 set list
+set number
+
+" Due to the paste keybinding in Windows, VISUAL BLOCK mode is tough to enter without a custom command
+command! CtrlV execute "normal! \<C-v>"
