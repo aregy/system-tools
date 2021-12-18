@@ -1,7 +1,9 @@
 ; ^[::Esc ; This key combination seems to be mapped onto the Windows key in Win11 in spite of anything you say, do, or want to believe
 ; ա, բ, գ, դ, ե, զ, է, ը, թ, ժ, ի, լ, խ, ծ, կ, հ, ձ, ղ, ճ, մ, յ, ն, շ, ո, չ, պ, ջ, ռ, ս, վ, տ, ր, ց, ւ, փ, ք
 ::h1::
-    Send {U+0561}
+    Send {::f32::
+    Send {U+0561}}
+    return
     return
 ::h2::
     Send {U+0562}
@@ -216,4 +218,112 @@
     return
 ::hh36::
     Send {U+0554}
+    return
+; farsi script
+::f01::
+    Send {U+0621}
+    return
+::f02::
+    Send {U+0623}
+    return
+::f03::
+    Send {U+0626}
+    return
+::f04::
+    Send {U+0624}
+    return
+::f1::
+    Send {U+0627}
+    return
+::f2::
+    Send {U+0628}
+    return
+::f3::
+    Send {U+067E}
+    return
+::f4::
+    Send {U+062A}
+    return
+::f5::
+    Send {U+062B}
+    return
+::f6::
+    Send {U+062C}
+    return
+::f7::
+    Send {U+0686}
+    return
+::f8::
+    Send {U+062D}
+    return
+::f9::
+    Send {U+062E}
+    return
+::f10::
+    Send {U+062F}
+    return
+::f11::
+    Send {U+0630}
+    return
+::f12::
+    Send {U+0631}
+    return
+::f13::
+    Send {U+0632}
+    return
+::f14::
+    Send {U+0698}
+    return
+::f15::
+    Send {U+0633}
+    return
+::f16::
+    Send {U+0634}
+    return
+::f17::
+    Send {U+0635}
+    return
+::f18::
+    Send {U+0636}
+::f19::
+    Send {U+0637}
+    return
+::f20::
+    Send {U+0638}
+    return
+::f21::
+    Send {U+0639}
+    return
+::f22::
+    Send {U+063A}
+    return
+::f23::
+    Send {U+0641}
+    return
+::f24::
+    Send {U+0642}
+    return
+::f25::
+    Send {U+06A9}
+    return
+::f26::
+    Send {U+06AF}
+    return
+::f27::
+    Send {U+0644}
+    return
+::f28::
+    Send {U+0645}
+    return
+::f29::
+    Send {U+0646}
+    return
+::f30::
+    Send {U+0648}
+    return
+::f31::
+    Send {U+0647}
+    return
+::f32::
+    Send {U+06C}
     return
