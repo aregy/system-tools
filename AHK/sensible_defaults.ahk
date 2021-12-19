@@ -1,329 +1,416 @@
 ; ^[::Esc ; This key combination seems to be mapped onto the Windows key in Win11 in spite of anything you say, do, or want to believe
 ; ա, բ, գ, դ, ե, զ, է, ը, թ, ժ, ի, լ, խ, ծ, կ, հ, ձ, ղ, ճ, մ, յ, ն, շ, ո, չ, պ, ջ, ռ, ս, վ, տ, ր, ց, ւ, փ, ք
-::h1::
-    Send {::f32::
+::hh1::
     Send {U+0561}}
     return
-    return
-::h2::
+::hh2::
     Send {U+0562}
     return
-::h3::
+::hh3::
     Send {U+0563}
     return
-::h4::
+::hh4::
     Send {U+0564}
     return
-::h5::
+::hh5::
     Send {U+0565}
     return
-::h6::
+::hh6::
     Send {U+0566}
     return
-::h7::
+::hh7::
     Send {U+0567}
     return
-::h8::
+::hh8::
     Send {U+0568}
     return
-::h9::
+::hh9::
     Send {U+0569}
     return
-::h10::
+::hh10::
     Send {U+056a}
     return
-::h11::
+::hh11::
     Send {U+056b}
     return
-::h12::
+::hh12::
     Send {U+056c}
     return
-::h13::
+::hh13::
     Send {U+056d}
     return
-::h14::
+::hh14::
     Send {U+056e}
     return
-::h15::
+::hh15::
     Send {U+056f}
     return
-::h16::
+::hh16::
     Send {U+0570}
     return
-::h17::
+::hh17::
     Send {U+0571}
     return
-::h18::
+::hh18::
     Send {U+0572}
     return
-::h19::
+::hh19::
     Send {U+0573}
     return
-::h20::
+::hh20::
     Send {U+0574}
     return
-::h21::
+::hh21::
     Send {U+0575}
     return
-::h22::
+::hh22::
     Send {U+0576}
     return
-::h23::
+::hh23::
     Send {U+0577}
     return
-::h24::
+::hh24::
     Send {U+0578}
     return
-::h25::
+::hh25::
     Send {U+0579}
     return
-::h26::
+::hh26::
     Send {U+057a}
     return
-::h27::
+::hh27::
     Send {U+057b}
     return
-::h28::
+::hh28::
     Send {U+057c}
     return
-::h29::
+::hh29::
     Send {U+057d}
     return
-::h30::
+::hh30::
     Send {U+057e}
     return
-::h31::
+::hh31::
     Send {U+057f}
     return
-::h32::
+::hh32::
     Send {U+0580}
     return
-::h33::
+::hh33::
     Send {U+0581}
     return
-::h34::
+::hh34::
     Send {U+0582}
     return
-::h35::
+::hh35::
     Send {U+0583}
     return
-::h36::
+::hh36::
     Send {U+0584}
     return
 ; Uppercase Armenian letters
-::hh1::
+::hhh1::
     Send {U+0531}
     return
-::hh2::
+::hhh2::
     Send {U+0532}
     return
-::hh3::
+::hhh3::
     Send {U+0533}
     return
-::hh4::
+::hhh4::
     Send {U+0534}
     return
-::hh5::
+::hhh5::
     Send {U+0535}
     return
-::hh6::
+::hhh6::
     Send {U+0536}
     return
-::hh7::
+::hhh7::
     Send {U+0537}
     return
-::hh8::
+::hhh8::
     Send {U+0538}
     return
-::hh9::
+::hhh9::
     Send {U+0539}
     return
-::hh10::
+::hhh10::
     Send {U+053a}
     return
-::hh11::
+::hhh11::
     Send {U+053b}
     return
-::hh12::
+::hhh12::
     Send {U+053c}
     return
-::hh13::
+::hhh13::
     Send {U+053d}
     return
-::hh14::
+::hhh14::
     Send {U+053e}
     return
-::hh15::
+::hhh15::
     Send {U+053f}
     return
-::hh16::
+::hhh16::
     Send {U+0540}
     return
-::hh17::
+::hhh17::
     Send {U+0541}
     return
-::hh18::
+::hhh18::
     Send {U+0542}
     return
-::hh19::
+::hhh19::
     Send {U+0543}
     return
-::hh20::
+::hhh20::
     Send {U+0544}
     return
-::hh21::
+::hhh21::
     Send {U+0545}
     return
-::hh22::
+::hhh22::
     Send {U+0546}
     return
-::hh23::
+::hhh23::
     Send {U+0547}
     return
-::hh24::
+::hhh24::
     Send {U+0548}
     return
-::hh25::
+::hhh25::
     Send {U+0549}
     return
-::hh26::
+::hhh26::
     Send {U+054a}
     return
-::hh27::
+::hhh27::
     Send {U+054b}
     return
-::hh28::
+::hhh28::
     Send {U+054c}
     return
-::hh29::
+::hhh29::
     Send {U+054d}
     return
-::hh30::
+::hhh30::
     Send {U+054e}
     return
-::hh31::
+::hhh31::
     Send {U+054f}
     return
-::hh32::
+::hhh32::
     Send {U+0550}
     return
-::hh33::
+::hhh33::
     Send {U+0551}
     return
-::hh34::
+::hhh34::
     Send {U+0552}
     return
-::hh35::
+::hhh35::
     Send {U+0553}
     return
-::hh36::
+::hhh36::
     Send {U+0554}
     return
 ; farsi script
-::f01::
+::ff01::
     Send {U+0621}
     return
-::f02::
+::ff02::
     Send {U+0623}
     return
-::f03::
+::ff03::
     Send {U+0626}
     return
-::f04::
+::ff04::
     Send {U+0624}
     return
-::f1::
+::ff1::
     Send {U+0627}
     return
-::f2::
+::ff2::
     Send {U+0628}
     return
-::f3::
+::ff3::
     Send {U+067E}
     return
-::f4::
+::ff4::
     Send {U+062A}
     return
-::f5::
+::ff5::
     Send {U+062B}
     return
-::f6::
+::ff6::
     Send {U+062C}
     return
-::f7::
+::ff7::
     Send {U+0686}
     return
-::f8::
+::ff8::
     Send {U+062D}
     return
-::f9::
+::ff9::
     Send {U+062E}
     return
-::f10::
+::ff10::
     Send {U+062F}
     return
-::f11::
+::ff11::
     Send {U+0630}
     return
-::f12::
+::ff12::
     Send {U+0631}
     return
-::f13::
+::ff13::
     Send {U+0632}
     return
-::f14::
+::ff14::
     Send {U+0698}
     return
-::f15::
+::ff15::
     Send {U+0633}
     return
-::f16::
+::ff16::
     Send {U+0634}
     return
-::f17::
+::ff17::
     Send {U+0635}
     return
-::f18::
+::ff18::
     Send {U+0636}
-::f19::
+::ff19::
     Send {U+0637}
     return
-::f20::
+::ff20::
     Send {U+0638}
     return
-::f21::
+::ff21::
     Send {U+0639}
     return
-::f22::
+::ff22::
     Send {U+063A}
     return
-::f23::
+::ff23::
     Send {U+0641}
     return
-::f24::
+::ff24::
     Send {U+0642}
     return
-::f25::
+::ff25::
     Send {U+06A9}
     return
-::f26::
+::ff26::
     Send {U+06AF}
     return
-::f27::
+::ff27::
     Send {U+0644}
     return
-::f28::
+::ff28::
     Send {U+0645}
     return
-::f29::
+::ff29::
     Send {U+0646}
     return
-::f30::
+::ff30::
     Send {U+0648}
     return
-::f31::
+::ff31::
     Send {U+0647}
     return
-::f32::
+::ff32::
     Send {U+06C}
     return
+::ttt1::
+    Send{U+0041} ; A
+    return
+; 
+; 2
+; 3
+; 4
+; 5
+; 6
+; 7
+; 8
+; 9
+; 10
+; 11
+; 12
+; 13
+; 14
+; 15
+; 16
+; 17
+; 18
+; 19
+; 20
+; 21
+; 22
+; 23
+; 24
+; 25
+; 26
+; 27
+; 28
+; 29
+;     Send{U+0042} ; B
+;     Send{U+0043} ; C
+;     Send{U+00C7} ; Ç
+;     Send{U+0044} ; D
+;     Send{U+0045} ; E
+;     Send{U+0046} ; F
+;     Send{U+0047} ; G
+;     Send{U+011E} ; Ğ
+;     Send{U+0048} ; H
+;     Send{U+0130} ; İ
+;     Send{U+0049} ; I
+;     Send{U+004A} ; J
+;     Send{U+004B} ; K
+;     Send{U+004C} ; L
+;     Send{U+004D} ; M
+;     Send{U+004E} ; N
+;     Send{U+004F} ; O
+;     Send{U+00D6} ; Ö
+;     Send{U+0050} ; P
+;     Send{U+0052} ; R
+;     Send{U+0053} ; S
+;     Send{U+015E} ; Ş
+;     Send{U+0054} ; T
+;     Send{U+0055} ; U
+;     Send{U+00DC} ; Ü
+;     Send{U+0056} ; V
+;     Send{U+0059} ; Y
+;     Send{U+005A} ; Z
+;     Send{U+0061} ; a
+;     Send{U+0062} ; b
+;     Send{U+0063} ; c
+;     Send{U+00E7} ; ç
+;     Send{U+0064} ; d
+;     Send{U+0065} ; e
+;     Send{U+0066} ; f
+;     Send{U+0067} ; g
+;     Send{U+011F} ; ğ
+;     Send{U+0068} ; h
+;     Send{U+0131} ; ı
+;     Send{U+0069} ; i
+;     Send{U+006A} ; j
+;     Send{U+006B} ; k
+;     Send{U+006C} ; l
+;     Send{U+006D} ; m
+;     Send{U+006E} ; n
+;     Send{U+006F} ; o
+;     Send{U+00F6} ; ö
+;     Send{U+0070} ; p
+;     Send{U+0072} ; r
+;     Send{U+0073} ; s
+;     Send{U+015F} ; ş
+;     Send{U+0074} ; t
+;     Send{U+0075} ; u
+;     Send{U+00FC} ; ü
+;     Send{U+0076} ; v
+;     Send{U+0079} ; y
+;     Send{U+007A} ; z

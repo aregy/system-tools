@@ -7,6 +7,7 @@ syntax enable
 
 set expandtab
 set hlsearch
+set incsearch
 set list
 set number
 set ruler
