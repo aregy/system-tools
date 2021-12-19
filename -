@@ -1,9 +1,9 @@
+::uu0::
+    Input KeyCode, L3
+    MsgBox, That's all folks: %KeyCode%
+    return
 ; ^[::Esc ; This key combination seems to be mapped onto the Windows key in Win11 in spite of anything you say, do, or want to believe
 ; ա, բ, գ, դ, ե, զ, է, ը, թ, ժ, ի, լ, խ, ծ, կ, հ, ձ, ղ, ճ, մ, յ, ն, շ, ո, չ, պ, ջ, ռ, ս, վ, տ, ր, ց, ւ, փ, ք
-::sc0x::
-    Input, KeyCode, L4
-    Send {U+%KeyCode%}
-    return
 ::hh1::
     Send {U+0561}}
     return
@@ -327,11 +327,11 @@
     Send {U+0647}
     return
 ::ff32::
-    Send {U+06CC}
+    Send {U+06C}
     return
 ::ttt1::
-     Send {U+0041} ; A
-     return
+    Send{U+0041} ; A
+    return
 ; 
 ; 2
 ; 3
