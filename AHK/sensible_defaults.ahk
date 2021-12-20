@@ -1,224 +1,224 @@
 ; ^[::Esc ; This key combination seems to be mapped onto the Windows key in Win11 in spite of anything you say, do, or want to believe
 ; ա, բ, գ, դ, ե, զ, է, ը, թ, ժ, ի, լ, խ, ծ, կ, հ, ձ, ղ, ճ, մ, յ, ն, շ, ո, չ, պ, ջ, ռ, ս, վ, տ, ր, ց, ւ, փ, ք
-::sc0x::
+::c0x::
     Input, KeyCode, L4
     Send {U+%KeyCode%}
     return
-::hh1::
+::h1::
     Send {U+0561}}
     return
-::hh2::
+::h2::
     Send {U+0562}
     return
-::hh3::
+::h3::
     Send {U+0563}
     return
-::hh4::
+::h4::
     Send {U+0564}
     return
-::hh5::
+::h5::
     Send {U+0565}
     return
-::hh6::
+::h6::
     Send {U+0566}
     return
-::hh7::
+::h7::
     Send {U+0567}
     return
-::hh8::
+::h8::
     Send {U+0568}
     return
-::hh9::
+::h9::
     Send {U+0569}
     return
-::hh10::
+::h10::
     Send {U+056a}
     return
-::hh11::
+::h11::
     Send {U+056b}
     return
-::hh12::
+::h12::
     Send {U+056c}
     return
-::hh13::
+::h13::
     Send {U+056d}
     return
-::hh14::
+::h14::
     Send {U+056e}
     return
-::hh15::
+::h15::
     Send {U+056f}
     return
-::hh16::
+::h16::
     Send {U+0570}
     return
-::hh17::
+::h17::
     Send {U+0571}
     return
-::hh18::
+::h18::
     Send {U+0572}
     return
-::hh19::
+::h19::
     Send {U+0573}
     return
-::hh20::
+::h20::
     Send {U+0574}
     return
-::hh21::
+::h21::
     Send {U+0575}
     return
-::hh22::
+::h22::
     Send {U+0576}
     return
-::hh23::
+::h23::
     Send {U+0577}
     return
-::hh24::
+::h24::
     Send {U+0578}
     return
-::hh25::
+::h25::
     Send {U+0579}
     return
-::hh26::
+::h26::
     Send {U+057a}
     return
-::hh27::
+::h27::
     Send {U+057b}
     return
-::hh28::
+::h28::
     Send {U+057c}
     return
-::hh29::
+::h29::
     Send {U+057d}
     return
-::hh30::
+::h30::
     Send {U+057e}
     return
-::hh31::
+::h31::
     Send {U+057f}
     return
-::hh32::
+::h32::
     Send {U+0580}
     return
-::hh33::
+::h33::
     Send {U+0581}
     return
-::hh34::
+::h34::
     Send {U+0582}
     return
-::hh35::
+::h35::
     Send {U+0583}
     return
-::hh36::
+::h36::
     Send {U+0584}
     return
 ; Uppercase Armenian letters
-::hhh1::
+::hh1::
     Send {U+0531}
     return
-::hhh2::
+::hh2::
     Send {U+0532}
     return
-::hhh3::
+::hh3::
     Send {U+0533}
     return
-::hhh4::
+::hh4::
     Send {U+0534}
     return
-::hhh5::
+::hh5::
     Send {U+0535}
     return
-::hhh6::
+::hh6::
     Send {U+0536}
     return
-::hhh7::
+::hh7::
     Send {U+0537}
     return
-::hhh8::
+::hh8::
     Send {U+0538}
     return
-::hhh9::
+::hh9::
     Send {U+0539}
     return
-::hhh10::
+::hh10::
     Send {U+053a}
     return
-::hhh11::
+::hh11::
     Send {U+053b}
     return
-::hhh12::
+::hh12::
     Send {U+053c}
     return
-::hhh13::
+::hh13::
     Send {U+053d}
     return
-::hhh14::
+::hh14::
     Send {U+053e}
     return
-::hhh15::
+::hh15::
     Send {U+053f}
     return
-::hhh16::
+::hh16::
     Send {U+0540}
     return
-::hhh17::
+::hh17::
     Send {U+0541}
     return
-::hhh18::
+::hh18::
     Send {U+0542}
     return
-::hhh19::
+::hh19::
     Send {U+0543}
     return
-::hhh20::
+::hh20::
     Send {U+0544}
     return
-::hhh21::
+::hh21::
     Send {U+0545}
     return
-::hhh22::
+::hh22::
     Send {U+0546}
     return
-::hhh23::
+::hh23::
     Send {U+0547}
     return
-::hhh24::
+::hh24::
     Send {U+0548}
     return
-::hhh25::
+::hh25::
     Send {U+0549}
     return
-::hhh26::
+::hh26::
     Send {U+054a}
     return
-::hhh27::
+::hh27::
     Send {U+054b}
     return
-::hhh28::
+::hh28::
     Send {U+054c}
     return
-::hhh29::
+::hh29::
     Send {U+054d}
     return
-::hhh30::
+::hh30::
     Send {U+054e}
     return
-::hhh31::
+::hh31::
     Send {U+054f}
     return
-::hhh32::
+::hh32::
     Send {U+0550}
     return
-::hhh33::
+::hh33::
     Send {U+0551}
     return
-::hhh34::
+::hh34::
     Send {U+0552}
     return
-::hhh35::
+::hh35::
     Send {U+0553}
     return
-::hhh36::
+::hh36::
     Send {U+0554}
     return
 ; farsi script
