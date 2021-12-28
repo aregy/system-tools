@@ -1,3 +1,79 @@
+launchOrSwitchOutlook()
+{
+  IfWinExist ahk_class rctrl_renwnd32
+  {
+    WinActivate, ahk_class rctrl_renwnd32
+  }
+  Else
+  {
+    Run "C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE"
+  }
+}
+
+launchOrSwitchSumatraPDF()
+{
+  IfWinExist ahk_class SUMATRA_PDF_FRAME
+  {
+    WinActivate, ahk_class SUMATRA_PDF_FRAME
+  }
+  Else
+  {
+    Run "C:\Users\Areg\AppData\Local\SumatraPDF\SumatraPDF.exe"
+  }
+}
+
+launchOrSwitchVisualStudio()
+{
+  IfWinExist ahk_exe devenv.exe
+  {
+    WinActivate, ahk_exe devenv.exe
+  }
+  Else
+  {
+    Run "C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\Common7\IDE\devenv.exe"
+  }
+}
+launchOrSwitchGvim()
+{
+  IfWinExist ahk_class Vim
+  {
+    WinActivate, ahk_class Vim
+  }
+  Else
+  {
+    Run "C:\tools\vim\vim82\gvim.exe"
+  }
+  Return
+}
+launchOrSwitchWterminal()
+{
+  IfWinExist ahk_class CASCADIA_HOSTING_WINDOW_CLASS
+  {
+    WinActivate, ahk_class CASCADIA_HOSTING_WINDOW_CLASS
+  }
+  Else
+  {
+    Run "C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.11.3471.0_x64__8wekyb3d8bbwe\WindowsTerminal.exe"
+  }
+}
+launchOrSwitchFirefox()
+{
+  IfWinExist ahk_class MozillaWindowClass
+  {
+    WinActivate, ahk_class MozillaWindowClass
+  }
+  Else
+  {
+    Run "C:\Program Files\Mozilla Firefox\firefox.exe"
+  }
+  Return
+}
++F4::launchOrSwitchOutlook()
++F5::launchOrSwitchFirefox()
++F6::launchOrSwitchSumatraPDF()
++F7::launchOrSwitchVisualStudio()
++F8::launchOrSwitchGvim()
++F9::launchOrSwitchWterminal()
 ; ^[::Esc ; This key combination seems to be mapped onto the Windows key in Win11 in spite of anything you say, do, or want to believe
 ; ա, բ, գ, դ, ե, զ, է, ը, թ, ժ, ի, լ, խ, ծ, կ, հ, ձ, ղ, ճ, մ, յ, ն, շ, ո, չ, պ, ջ, ռ, ս, վ, տ, ր, ց, ւ, փ, ք
 ::c0x::
