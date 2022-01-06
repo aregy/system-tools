@@ -76,9 +76,9 @@ launchOrSwitchFirefox()
 +F9::launchOrSwitchWterminal()
 ; ^[::Esc ; This key combination seems to be mapped onto the Windows key in Win11 in spite of anything you say, do, or want to believe
 ; ա, բ, գ, դ, ե, զ, է, ը, թ, ժ, ի, լ, խ, ծ, կ, հ, ձ, ղ, ճ, մ, յ, ն, շ, ո, չ, պ, ջ, ռ, ս, վ, տ, ր, ց, ւ, փ, ք
-::c0x::
-    Input, KeyCode, L4
-    Send {U+%KeyCode%}
+::..::
+    Input, KeyCode, L3
+    Send {U+0.%KeyCode%}
     return
 ::h1::
     Send {U+0561}}
