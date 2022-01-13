@@ -1,5 +1,5 @@
 set guifont=Cascadia\ Mono:h12
-set listchars=space:·,tab:>-,eol:$
+set listchars=space:·,tab:>-
 set shiftwidth=4
 set tabstop=4
 
