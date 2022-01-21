@@ -3,7 +3,6 @@ set listchars=space:·,tab:>-
 set shiftwidth=4
 set tabstop=4
 
-set cursorline
 set expandtab
 set hidden
 set hlsearch
@@ -13,10 +12,6 @@ set number
 set ruler
 set wildmenu
 syntax enable
-
-" Due to the paste keybinding in Windows, VISUAL BLOCK mode is tough to enter without a custom command
-command! CtrlV execute "normal! \<C-v>"
-nnoremap <silent> <C-[> <Esc>
 
 augroup dotnet_defaults
     autocmd!
