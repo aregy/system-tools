@@ -30,7 +30,7 @@ launchOrSwitchVisualStudio()
   }
   Else
   {
-    Run "C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\Common7\IDE\devenv.exe"
+    Run "C:\Program Files\Microsoft Visual Studio\2022\Preview\Common7\IDE\devenv.exe"
   }
 }
 launchOrSwitchGvim()
@@ -75,7 +75,6 @@ launchOrSwitchFirefox()
 +F8::launchOrSwitchGvim()
 +F9::launchOrSwitchWterminal()
 ; ^[::Esc ; This key combination seems to be mapped onto the Windows key in Win11 in spite of anything you say, do, or want to believe
-; ա, բ, գ, դ, ե, զ, է, ը, թ, ժ, ի, լ, խ, ծ, կ, հ, ձ, ղ, ճ, մ, յ, ն, շ, ո, չ, պ, ջ, ռ, ս, վ, տ, ր, ց, ւ, փ, ք
 ::..::
     Input, KeyCode, L3
     Send {U+0%KeyCode%}

@@ -32,6 +32,7 @@ function! Ordinals_to_armenian_words()
         let out_chars.=out_chars == '' ? word : ' '.word
     endfor
     let @*=out_chars
+    put=out_chars
 endfunction
 
 command! HH execute 'call Ordinals_to_armenian_words()'
