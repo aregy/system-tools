@@ -178,5 +178,5 @@ Currently a kludge of meta key depression state"</x-color>
 </x-color><x-color><param>#5F7F5F</param>;; </x-color><x-color><param>#7F9F7F</param>(globalunset-key (kbd "M"))
 
 </x-color>(<bold><x-color><param>#F0DFAF</param>use-package</x-color></bold> <x-color><param>#BFEBBF</param>zenburn-theme</x-color> <bold><x-color><param>#DCDCCC</param>:ensure</x-color></bold> t <bold><x-color><param>#DCDCCC</param>:config</x-color></bold> (load-theme 'zenburn))
-(set-cursor-color <x-color><param>#CC9393</param>"blue"</x-color>)
+(set-cursor-color <x-color><param>#CC9393</param>"#96B192"</x-color>)
 
