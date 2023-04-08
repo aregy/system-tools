@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# solution courtesy of kind soul (ewout)[https://forums.puri.sm/t/keyboard-layout-unable-to-recognize-pipe/2022]
+
+echo "evdev:atkbd:dmi:bvn*:bvr*:bd*:svnPurism:pnLibrem13v4*" > /etc/udev/hwdb.d/90-purism-pipe-symbol-fix.hwdb
+echo " KEYBOARD_KEY_56=backslash" >> /etc/udev/hwdb.d/90-purism-pipe-symbol-fix.hwdb
+sudo systemd-hwdb update
+sudo udevadm trigger
