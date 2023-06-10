@@ -2,7 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 ;;; note: flycheck-clang-language-standard needs to be set as a directory(-scoped) variable to nullify c++11 warnings
-
+(setq backup-directory-alist
+                `(("." . ,(concat user-emacs-directory "backups"))))
 (set-frame-size (selected-frame) 120 50)
 (scroll-bar-mode -1)
 (if (eq system-type 'darwin)
@@ -30,9 +31,9 @@
 (package-refresh-contents)
 (package-install 'use-package))
 ;; (set-frame-font "Monaco 16")
-(set-face-attribute 'default nil :family "Courier New" :height 160)
+(set-face-attribute 'default nil :family "JetBrainsMono NF" :height 160)
 (set-fontset-font (face-attribute 'default :fontset)
-                  '(#x0530 . #x058F)        "Arti v05" nil 'append)
+                  '(#x0530 . #x058F)        "Arti Porto v01" nil 'append)
 ;;(set-face-attribute 'default nil :family "Arti v05" :height 140)
 ;;(set-face-attribute 'default nil :family "ArmGuard_U" :height 140)
 ;; From https://github.com/kaz-yos/emacs see  emacs/init.d/200_language-and-font-related.el
@@ -93,7 +94,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("c4cecd97a6b30d129971302fd8298c2ff56189db0a94570e7238bc95f9389cfb" default))
+   '("f366d4bc6d14dcac2963d45df51956b2409a15b770ec2f6d730e73ce0ca5c8a7" "c4cecd97a6b30d129971302fd8298c2ff56189db0a94570e7238bc95f9389cfb" default))
  '(package-selected-packages
    '(flycheck-rust zenburn-theme visual-regexp use-package typescript-mode solarized-theme rust-mode multiple-cursors helm flycheck evil company-statistics company-go anki-editor anki-connect ace-jump-mode)))
 (custom-set-faces
