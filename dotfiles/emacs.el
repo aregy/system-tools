@@ -51,7 +51,7 @@
 
 (use-package consult
   :ensure t)
-
+(add-to-list 'image-types 'svg) ;;added by AY for MacOS after installing librsvg
 (use-package treemacs
   :ensure t)
 
@@ -149,7 +149,9 @@ signature in rust"
   ;; GOPATH/bin
   (add-to-list 'exec-path "~/go/bin")
   (setq gofmt-command "goimports"))
-
+(use-package drag-stuff
+  :ensure t
+  :config (drag-stuff-global-mode t))
 (global-set-key (kbd "<f5>") #'recompile)
 
 (setq custom-file "~/.emacs.d/custom.el")
@@ -160,7 +162,9 @@ signature in rust"
       backup-directory-alist
       '(("." . "~/.emacs.d/backups")))
 
-(set-face-attribute 'region nil :background "deep sky blue")
+
+
+
 (set-face-attribute 'default nil :height 140)
 
 (tool-bar-mode -1)
@@ -195,16 +199,21 @@ signature in rust"
 ;;(server-start)
 ;;(require 'package)
 ;;(tool-bar-mode 0)
-;;(display-time-mode)
+(display-time-mode)
 ;;(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 ;;(package-initialize)
 ;;(unless (package-installed-p 'use-package)
 ;;(package-refresh-contents)
 ;;(package-install 'use-package))
 ;;;; (set-frame-font "Monaco 16")
-(set-face-attribute 'default nil :family "JetBrainsMono NF" :height 120)
-(set-fontset-font (face-attribute 'default :fontset)
-                  '(#x0530 . #x058F)        "Arti Porto v01" nil 'append)
+(if (display-graphic-p)
+    (progn
+      ;; alternative config based option to calling the set-background-color
+      (add-to-list 'default-frame-alist '(background-color . "#FFF1E5"))
+      (set-face-attribute 'region nil :background "lightgreen") 
+      (set-face-attribute 'default nil :family "JetBrainsMono NF" :height 120)
+      (set-fontset-font (face-attribute 'default :fontset)
+                 '(#x0530 . #x058F)        "Arti Porto v01" nil 'append)))
 ;;;;(set-face-attribute 'default nil :family "Arti v05" :height 140)
 ;;;;(set-face-attribute 'default nil :family "ArmGuard_U" :height 140)
 ;;;; From https://github.com/kaz-yos/emacs see  emacs/init.d/200_language-and-font-related.el
@@ -253,6 +262,8 @@ signature in rust"
 ;;(global-set-key (kbd "C-c L") 'windmove-swap-states-right)
 ;;(global-set-key (kbd "C-x p") 'previous-buffer)
 ;;(global-set-key (kbd "C-x n") 'next-buffer)
+(global-set-key (kbd "<M-up>") 'drag-stuff-up)
+(global-set-key (kbd "<M-down>") 'drag-stuff-down)
 ;;(menu-bar--display-line-numbers-mode-relative)
 ;;(defun init.el:toggle-line-numbers ()
 ;;  "Toggle line numbers."
@@ -286,11 +297,10 @@ signature in rust"
 ;;;; (global-set-key (kbd "M-j") 'onpressed)
 ;;;; (globalunset-key (kbd "M"))
 ;; (use-package zenburn-theme :ensure t :config (load-theme 'zenburn))
-(set-cursor-color "#96B192")
+;;(set-cursor-color "#96B192")
 ;;(set-cursor-color "#332A28")
 (global-display-line-numbers-mode t)
 (menu-bar--display-line-numbers-mode-relative)
-(add-to-list 'image-types 'svg)
 (use-package beacon
   :ensure t
   :config (beacon-mode 1))
