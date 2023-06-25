@@ -1,4 +1,6 @@
-;; mostly directly and shamelessly lifted from Brent Westbrook's emacs config for go-mode+lsp-mode+company-mode support
+(setq inhibit-startup-message t)
+;; mostly directly and shamelessly lifted from Brent Westbrook's emacs
+;; config for go-mode+lsp-mode+company-mode support
 ;; https://github.com/ntBre/yt-configs/blob/c193e48dc205c844c3fbece86ceec65a571b2608/.emacs.d/init.el#L4
 ;; https://www.youtube.com/watch?v=UFPD7icMoHY
 
@@ -130,7 +132,7 @@ signature in rust"
 		      (s-join " " it))))
 	   (lsp--render-element (concat "```rust\n" sig "\n```")))))
 
-;;; Go
+;; ;;; Go
 (use-package go-mode
   :ensure t
   :hook ((go-mode . lsp-deferred)
@@ -149,6 +151,26 @@ signature in rust"
   ;; GOPATH/bin
   (add-to-list 'exec-path "~/go/bin")
   (setq gofmt-command "goimports"))
+
+;; (use-package go-mode
+;;   :ensure t
+;;   :hook ((go-mode . lsp-deferred)
+;; 	 (go-mode . company-mode))
+;;   :bind (:map go-mode-map
+;; 	      ("<f6>"  . gofmt)
+;; 	      ("C-c 6" . gofmt)
+;; 	      (setq tab-width 2))
+;;   :config
+;;   (require 'lsp-go)
+;;   ;; https://github.com/golang/tools/blob/master/gopls/doc/analyzers.md
+;;   (setq lsp-go-analyses
+;; 	'((fieldalignment . t)
+;; 	  (nilness        . t)
+;; 	  (unusedwrite    . t)
+;; 	  (unusedparams   . t)))
+;;   ;; GOPATH/bin
+;;   (add-to-list 'exec-path "~/go/bin")
+;;   (setq gofmt-command "goimports"))
 (use-package drag-stuff
   :ensure t
   :config (drag-stuff-global-mode t))
@@ -162,7 +184,8 @@ signature in rust"
       backup-directory-alist
       '(("." . "~/.emacs.d/backups")))
 
-
+(use-package powershell
+  :ensure t)
 
 
 (set-face-attribute 'default nil :height 140)
@@ -200,7 +223,7 @@ signature in rust"
 ;;(require 'package)
 ;;(tool-bar-mode 0)
 (display-time-mode)
-;;(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+;;(add-to-lisxt 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 ;;(package-initialize)
 ;;(unless (package-installed-p 'use-package)
 ;;(package-refresh-contents)
@@ -208,10 +231,15 @@ signature in rust"
 ;;;; (set-frame-font "Monaco 16")
 (if (display-graphic-p)
     (progn
-      ;; alternative config based option to calling the set-background-color
-      (add-to-list 'default-frame-alist '(background-color . "#FFF1E5"))
-      (set-face-attribute 'region nil :background "lightgreen") 
-      (set-face-attribute 'default nil :family "JetBrainsMono NF" :height 120)
+;;      ;; alternative config based option to calling the set-background-color
+      ;;      (add-to-list 'default-frame-alist '(background-color . "#FFF1E5"))
+      (set-face-background 'cursor "LavenderBlush4")
+      (set-face-foreground 'line-number-current-line "DarkOrange2")
+      (set-face-attribute 'line-number-current-line nil :background "gray90")
+      (set-face-attribute 'line-number-current-line nil :weight 'bold)
+      (set-foreground-color "#444444")
+      (set-face-attribute 'region nil :background "lightgreen")
+      (set-face-attribute 'default nil :family "IntelOne Mono" :height 120)
       (set-fontset-font (face-attribute 'default :fontset)
                  '(#x0530 . #x058F)        "Arti Porto v01" nil 'append)))
 ;;;;(set-face-attribute 'default nil :family "Arti v05" :height 140)
@@ -303,4 +331,5 @@ signature in rust"
 (menu-bar--display-line-numbers-mode-relative)
 (use-package beacon
   :ensure t
-  :config (beacon-mode 1))
+  :config (progn (beacon-mode 1)
+		 (setq beacon-blink-duration .1)))
