@@ -82,7 +82,8 @@
   :ensure t
   :bind (:map lsp-mode-map
 	      ("C-c d" . lsp-describe-thing-at-point)
-	      ("C-c a" . lsp-execute-code-action))
+	      ("C-c a" . lsp-execute-code-action)
+	      ("<f12>" . lsp-goto-type-definition))
   :bind-keymap ("C-c l" . lsp-command-map)
   :config
   (lsp-enable-which-key-integration t))
@@ -140,8 +141,8 @@ signature in rust"
   :bind (:map go-mode-map
 	      ("<f6>"  . gofmt)
 	      ("C-c 6" . gofmt))
-  :config
-  (require 'lsp-go)
+  :config (progn (require 'lsp-go)
+				 (setq tab-width 2))
   ;; https://github.com/golang/tools/blob/master/gopls/doc/analyzers.md
   (setq lsp-go-analyses
 	'((fieldalignment . t)
@@ -183,7 +184,7 @@ signature in rust"
       '((".*" "~/.emacs.d/auto-save-list/" t))
       backup-directory-alist
       '(("." . "~/.emacs.d/backups")))
-
+(set-default tab-width 4)
 (use-package powershell
   :ensure t)
 
@@ -238,7 +239,7 @@ signature in rust"
       (set-face-attribute 'line-number-current-line nil :background "gray90")
       (set-face-attribute 'line-number-current-line nil :weight 'bold)
       (set-foreground-color "#444444")
-      (set-face-attribute 'region nil :background "lightgreen")
+      ;;(set-face-attribute 'region nil :background "lightgreen")
       (set-face-attribute 'default nil :family "IntelOne Mono" :height 120)
       (set-fontset-font (face-attribute 'default :fontset)
                  '(#x0530 . #x058F)        "Arti Porto v01" nil 'append)))
