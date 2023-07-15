@@ -1,3 +1,7 @@
+;; (if (boundp 'image-types)
+;;     (setq image-types (cons 'svg image-types))
+;;     (setq image-types '('svg)))
+(setq image-types '('svg))
 (setq inhibit-startup-message t)
 ;; mostly directly and shamelessly lifted from Brent Westbrook's emacs
 ;; config for go-mode+lsp-mode+company-mode support
@@ -184,7 +188,7 @@ signature in rust"
       '((".*" "~/.emacs.d/auto-save-list/" t))
       backup-directory-alist
       '(("." . "~/.emacs.d/backups")))
-(set-default tab-width 4)
+(set-default 'tab-width 4)
 (use-package powershell
   :ensure t)
 
@@ -192,7 +196,6 @@ signature in rust"
 (set-face-attribute 'default nil :height 140)
 
 (tool-bar-mode -1)
-(scroll-bar-mode -1)
 (menu-bar-mode -1)
 (put 'narrow-to-region 'disabled nil)
 
@@ -234,6 +237,7 @@ signature in rust"
     (progn
 ;;      ;; alternative config based option to calling the set-background-color
       ;;      (add-to-list 'default-frame-alist '(background-color . "#FFF1E5"))
+	  (scroll-bar-mode -1)
       (set-face-background 'cursor "LavenderBlush4")
       (set-face-foreground 'line-number-current-line "DarkOrange2")
       (set-face-attribute 'line-number-current-line nil :background "gray90")
