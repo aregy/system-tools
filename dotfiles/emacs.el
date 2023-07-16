@@ -1,4 +1,7 @@
-;; (if (boundp 'image-types)
+(when (and (eq system-type 'darwin) (display-graphic-p))
+    (progn (setq mac-command-modifier 'meta)
+    (setq mac-option-modifier 'super)))
+;; (when (boundp 'image-types)
 ;;     (setq image-types (cons 'svg image-types))
 ;;     (setq image-types '('svg)))
 (setq image-types '('svg))
@@ -238,7 +241,7 @@ signature in rust"
 ;;      ;; alternative config based option to calling the set-background-color
       ;;      (add-to-list 'default-frame-alist '(background-color . "#FFF1E5"))
 	  (scroll-bar-mode -1)
-      (set-face-background 'cursor "LavenderBlush4")
+      (set-face-background 'cursor "Cyan4")
       (set-face-foreground 'line-number-current-line "DarkOrange2")
       (set-face-attribute 'line-number-current-line nil :background "gray90")
       (set-face-attribute 'line-number-current-line nil :weight 'bold)
