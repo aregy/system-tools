@@ -241,7 +241,7 @@ signature in rust"
 ;;      ;; alternative config based option to calling the set-background-color
       ;;      (add-to-list 'default-frame-alist '(background-color . "#FFF1E5"))
 	  (scroll-bar-mode -1)
-      (set-face-background 'cursor "Cyan4")
+      (set-face-background 'cursor "Cyan1")
       (set-face-foreground 'line-number-current-line "DarkOrange2")
       (set-face-attribute 'line-number-current-line nil :background "gray90")
       (set-face-attribute 'line-number-current-line nil :weight 'bold)
