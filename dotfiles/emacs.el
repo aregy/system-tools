@@ -6,7 +6,7 @@
 ;; (when (boundp 'image-types)
 ;;     (setq image-types (cons 'svg image-types))
 ;;     (setq image-types '('svg)))
-(setq image-types '('svg))
+(setq image-types '('svg 'png))
 (setq inhibit-startup-message t)
 ;; mostly directly and shamelessly lifted from Brent Westbrook's emacs
 ;; config for go-mode+lsp-mode+company-mode support
@@ -63,16 +63,16 @@
 (use-package consult
   :ensure t)
 (add-to-list 'image-types 'svg) ;;added by AY for MacOS after installing librsvg
-(use-package treemacs
-  :ensure t)
-
-(use-package treemacs-evil
-  :ensure t)
-
+;; (use-package treemacs
+;;   :ensure t
+;; )
+;; (use-package treemacs-evil
+;;   :ensure t)
+;; 
 (use-package winum
   :ensure t
   :config
-  (global-set-key (kbd "M-0") 'treemacs-select-window)
+;;  (global-set-key (kbd "M-0") 'treemacs-select-window)
   (global-set-key (kbd "M-1") 'winum-select-window-1)
   (global-set-key (kbd "M-2") 'winum-select-window-2)
   (global-set-key (kbd "M-3") 'winum-select-window-3)
