@@ -1,12 +1,8 @@
-(when (and (eq system-type 'darwin) (display-graphic-p))
-    (progn (setq mac-command-modifier 'meta)
-	   (setq mac-option-modifier 'super)))
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 ;; (when (boundp 'image-types)
 ;;     (setq image-types (cons 'svg image-types))
 ;;     (setq image-types '('svg)))
-(setq image-types '('svg 'png))
 (setq inhibit-startup-message t)
 ;; mostly directly and shamelessly lifted from Brent Westbrook's emacs
 ;; config for go-mode+lsp-mode+company-mode support
@@ -24,23 +20,23 @@
   (package-install 'use-package))
 (require 'use-package)
 
-;; ;;; evil
-;; (use-package evil
-;;   :ensure t
-;;   :config
-;;   (evil-mode)
-;;   (evil-set-undo-system 'undo-redo)
-;;   (defmacro brw/fix-evil-hook (hook state key fn)
-;;     `(add-hook ',hook
-;; 	       (lambda ()
-;; 		 (evil-local-set-key ',state (kbd ,key) ',fn))))
-;;   (brw/fix-evil-hook xref--xref-buffer-mode-hook motion "RET" xref-goto-xref)
-;;   (brw/fix-evil-hook flycheck-error-list-mode-hook motion "RET" flycheck-error-list-goto-error)
-;;   (mapcar
-;;    #'(lambda (lst)
-;;        (evil-set-initial-state (car lst) (cdr lst)))
-;;    '((xref--xref-buffer-mode   . motion)
-;;      (flycheck-error-list-mode . motion))))
+;;; evil
+(use-package evil
+  :ensure t
+  :config
+  (evil-mode)
+  (evil-set-undo-system 'undo-redo)
+  (defmacro brw/fix-evil-hook (hook state key fn)
+    `(add-hook ',hook
+	       (lambda ()
+		 (evil-local-set-key ',state (kbd ,key) ',fn))))
+  (brw/fix-evil-hook xref--xref-buffer-mode-hook motion "RET" xref-goto-xref)
+  (brw/fix-evil-hook flycheck-error-list-mode-hook motion "RET" flycheck-error-list-goto-error)
+  (mapcar
+   #'(lambda (lst)
+       (evil-set-initial-state (car lst) (cdr lst)))
+   '((xref--xref-buffer-mode   . motion)
+    (flycheck-error-list-mode . motion))))
 
 (use-package rainbow-mode
   :ensure t)
@@ -213,7 +209,7 @@ signature in rust"
 ;;                `(("." . ,(concat user-emacs-directory "backups"))))
 ;;(set-frame-size (selected-frame) 120 55)
 ;;(scroll-bar-mode -1)
-;;(if (eq system-type 'darwin)
+;;(if (eq system-type 'narwin)
 ;;  ;; MacOS modifier keys
 ;;  (setq ns-command-modifier 'meta)
 ;;  (if (eq system-type 'windows-nt)
@@ -243,17 +239,6 @@ signature in rust"
 ;;      ;; alternative config based option to calling the set-background-color
       ;;      (add-to-list 'default-frame-alist '(background-color . "#FFF1E5"))
 	  (scroll-bar-mode -1)
-      (set-face-background 'cursor "Cyan1")
-      (set-face-foreground 'line-number-current-line "DarkOrange2")
-      (set-face-attribute 'line-number-current-line nil :background "gray90")
-      (set-face-attribute 'line-number-current-line nil :weight 'bold)
-      (set-foreground-color "#444444")
-      ;;(set-face-attribute 'region nil :background "lightgreen")
-      (set-face-attribute 'default nil :family "IntelOne Mono" :height 120)
-      (set-fontset-font (face-attribute 'default :fontset)
-                 '(#x0530 . #x058F)        "Arti Porto v01" nil 'append)))
-;;;;(set-face-attribute 'default nil :family "Arti v05" :height 140)
-;;;;(set-face-attribute 'default nil :family "ArmGuard_U" :height 140)
 ;;;; From https://github.com/kaz-yos/emacs see  emacs/init.d/200_language-and-font-related.el
 ;;(invert-face 'mode-line)
 ;;(setq create-lockfiles nil)
@@ -334,7 +319,6 @@ signature in rust"
 ;;)
 ;;;; (global-set-key (kbd "M-j") 'onpressed)
 ;;;; (globalunset-key (kbd "M"))
-;; (use-package zenburn-theme :ensure t :config (load-theme 'zenburn))
 ;;(set-cursor-color "#96B192")
 ;;(set-cursor-color "#332A28")
 (global-display-line-numbers-mode t)
@@ -343,3 +327,34 @@ signature in rust"
   :ensure t
   :config (progn (beacon-mode 1)
 		 (setq beacon-blink-duration .1)))
+(setq
+   gnus-select-method
+   `(nnimap
+     "proton"
+     (nnimap-address "127.0.0.1")
+     (nnimap-server-port 1143)
+     (nnimap-user "aregy@are.gy")
+;;     (nnimap-authenticator xoauth2)
+;;     (nnimap-expunge always)
+;;     (nnmail-expiry-wait immediate)
+     (nnimap-streaming t)
+     (nnimap-stream plain)))
+;;      (nnimap-stream ssl)))
+
+(use-package zenburn-theme :ensure t :config (load-theme 'zenburn))
+
+      (set-face-background 'cursor "LightBlue3")
+      (set-face-foreground 'line-number-current-line "#EBE0B4")
+;;      (set-face-attribute 'line-number-current-line nil :background "#383838")
+      (set-face-attribute 'line-number-current-line nil :weight 'bold)
+;;      (set-foreground-color "#444444")
+;;      (set-face-attribute 'region nil :background "lightgreen")
+      (set-face-attribute 'default nil :family "IntelOne Mono" :height 120)
+      (set-fontset-font (face-attribute 'default :fontset)
+                 '(#x0530 . #x058F)        "Arti Porto v01" nil 'append)))
+;;;;(set-face-attribute 'default nil :family "Arti v05" :height 140)
+;;;;(set-face-attribute 'default nil :family "ArmGuard_U" :height 140)
+
+(when (and (eq system-type 'darwin) (display-graphic-p))
+    (progn (setq mac-command-modifier 'meta)
+	   (setq mac-option-modifier 'super)))
