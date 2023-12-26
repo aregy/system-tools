@@ -1,21 +1,23 @@
 set guifont=Consolas:h12
-set listchars=space:˯,tab:>-,eol:~
+set listchars=tab:>-
+highlight ExtraWhitespace ctermbg=brown guibg=brown
+match ExtraWhitespace /\s\+$\|\s\s\+/
 set shiftwidth=4
 set tabstop=4
-
-set expandtab
+" set expandtab
 set hidden
 set hlsearch
 set incsearch
 set list
 set number
+set relativenumber
 set ruler
 set wildmenu
 syntax enable
 
 augroup dotnet_defaults
-    autocmd!
-    autocmd BufNewFile,BufRead *.xaml set syntax=xml
+autocmd!
+autocmd BufNewFile,BufRead *.xaml set syntax=xml
 augroup end
 
 function! Ordinals_to_armenian_words()
