@@ -1,10 +1,10 @@
 set guifont=Consolas:h12
-set listchars=tab:>-
-highlight ExtraWhitespace ctermbg=brown guibg=brown
+set listchars=tab:>·
+highlight ExtraWhitespace ctermbg=black guibg=gray
 match ExtraWhitespace /\s\+$\|\s\s\+/
-set shiftwidth=4
-set tabstop=4
-" set expandtab
+set shiftwidth=2
+set tabstop=2
+set expandtab
 set hidden
 set hlsearch
 set incsearch
