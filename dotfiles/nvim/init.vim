@@ -1,6 +1,6 @@
-set guifont=Consolas:h12
-set listchars=tab:>·
-highlight ExtraWhitespace ctermbg=black guibg=gray
+set guifont=JetsBrains\ Mono\ NL:h12
+set listchars=tab:▸▹
+highlight ExtraWhitespace ctermbg=gray guibg=white
 match ExtraWhitespace /\s\+$\|\s\s\+/
 set shiftwidth=2
 set tabstop=2
@@ -14,6 +14,7 @@ set relativenumber
 set ruler
 set wildmenu
 syntax enable
+colorscheme habamax
 
 augroup dotnet_defaults
 autocmd!
@@ -57,3 +58,4 @@ endfunction
 
 command! HH execute 'call Ordinals_to_armenian_words()'
 command! RR execute 'call Ordinals_to_russian_words()'
+
