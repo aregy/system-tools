@@ -1,4 +1,4 @@
-set guifont=JetsBrains\ Mono\ NL:h12
+set guifont=Monaco:h18
 set listchars=tab:▸▹
 highlight ExtraWhitespace ctermbg=gray guibg=white
 match ExtraWhitespace /\s\+$\|\s\s\+/
@@ -10,7 +10,7 @@ set hlsearch
 set incsearch
 set list
 set number
-set relativenumber
+set norelativenumber
 set ruler
 set wildmenu
 syntax enable
@@ -20,6 +20,14 @@ augroup dotnet_defaults
 autocmd!
 autocmd BufNewFile,BufRead *.xaml set syntax=xml
 augroup end
+
+set formatprg=clang-format
+function! FormatBuffer()
+    let cursor_pos = getpos('.')   " Save the current cursor position
+    :%!clang-format
+    call setpos('.', cursor_pos)   " Restore the cursor position
+endfunction
+autocmd BufWritePre *.c,*.cpp,*.cc,*.h,*.hpp,*.vert,*.frag call FormatBuffer()
 
 function! Ordinals_to_armenian_words()
     let chunks=split(input('Տառեր(## ···): '))
@@ -58,4 +66,3 @@ endfunction
 
 command! HH execute 'call Ordinals_to_armenian_words()'
 command! RR execute 'call Ordinals_to_russian_words()'
-
