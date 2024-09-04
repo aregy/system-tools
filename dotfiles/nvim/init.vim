@@ -14,7 +14,6 @@ set norelativenumber
 set ruler
 set wildmenu
 syntax enable
-colorscheme habamax
 
 augroup dotnet_defaults
 autocmd!
@@ -66,3 +65,7 @@ endfunction
 
 command! HH execute 'call Ordinals_to_armenian_words()'
 command! RR execute 'call Ordinals_to_russian_words()'
+
+syntax enable
+set background=light
+colorscheme vim
