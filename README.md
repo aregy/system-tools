@@ -1,17 +1,24 @@
 # System tools
+_Odds and ends for multiple environments_
 
-Vanilla emacs/vim, Powershell, Auto hotkey conveniences
-Odds and ends for multiple environments
++--------------------------+----------------+
+| ENVIRONMENT              | MACHINE        |
++--------------------------+----------------+
+| OpenSUSE Tumbleweed Aeon | Pixelbook      |
+| OpenSUSE Tumbleweed      | Win11 WSL      |
+| MacOS:latest             | M2 Macbook Air |
+| Debian?                  | Vultr          |
+| vim                      | ALL            |
++--------------------------+----------------+
 
-## Current environments
-
-OpenSUSE Tumbleweed Aeon
-MacOS
-vim
-
-## Deprecated environments
+## Dropped environments
 
 NixOS
 nvim
 emacs
 tmux
+
+## Undocumented
+
+APL
+Auto Hotkey (AHK)
