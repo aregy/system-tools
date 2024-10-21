@@ -12,8 +12,11 @@ _Odds and ends for multiple environments_
 ## Dropped environments
 
 ~~NixOS~~
+
 ~~nvim~~
+
 ~~emacs~~
+
 ~~tmux~~
 
 ## Undocumented
