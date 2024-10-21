@@ -16,3 +16,5 @@ if [! -d "$HOME/.screen" ]; then
 	mkdir -p "$HOME/.screen" && cd chmod 777 $_
 fi
 export SCREENDIR="$HOME/.screen"
+
+export LESS="+i"
