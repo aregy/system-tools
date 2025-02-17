@@ -8,10 +8,14 @@ iabbr <buffer> iota ⍳
 iabbr <buffer> omega ⍵
 iabbr <buffer> times ×
 iabbr <buffer> alpha ⍺
-iabbr <buffer> circle ⌽
+iabbr <buffer> cstile ⌽
+iabbr <buffer> circle ○
+iabbr <buffer> dot .
 iabbr <buffer> star *
 iabbr <buffer> quad ⎕
 iabbr <buffer> lamp ⍝
+iabbr <buffer> hminus ¯
+iabbr <buffer> qquad ⍞
 "" checked up to this line; the rest could potentially be AI garbage!
 " iabbr <buffer> delta ⍙
 " iabbr <buffer> epsilon ⍷

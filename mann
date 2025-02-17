@@ -1,0 +1,2 @@
+#!/bin/sh
+man "$1" | sed 's/.\x8//g' | nvim -R -c 'set filetype=man'
